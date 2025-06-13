@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background: #007BFF;
+  padding: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+.game-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.game-controls label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.game-controls select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.game-controls select:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+.game-controls button {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-controls button:hover {
+  background-color: #303f9f;
+}
+
+#timer {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#game-board {
+  display: grid;
+  justify-self: center;
+  gap: 10px;
+  max-width: 600px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  user-select: none;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.cell.hidden {
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: transparent;
+}
+
+progress {
+  width: 200px;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.hidden-section {
+  display: none;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.hidden-section {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}

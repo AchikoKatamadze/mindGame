@@ -1,0 +1,62 @@
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>გონების თამაში</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-links">
+      <a href="#" onclick="showMain()">მთავარი</a>
+      <a href="#" id="rulesLink">წესები</a>
+      <a href="#" id="resultsLink">შედეგები</a>
+    </div>
+  </nav>
+  
+  <main>
+    <section id="game">
+    <div class="game-controls">
+        <label for="size">აირჩიე ზომა:</label>
+        <select id="size">
+            <option value="2">2x2</option>
+            <option value="4" selected>4x4</option>
+            <option value="6">6x6</option>
+        </select>
+        <button onclick="startGame()">დაწყება</button>
+        <div id="timer">დრო: 0წმ</div>
+    </div>
+      <div id="game-board"></div>
+      <progress id="progressBar" value="0" max="100"></progress>
+      <span id="progressValue">0%</span>
+      <p>ნაპოვნი წყვილები: <span id="matchCount">0</span></p>
+    </section>
+
+    <section id="rules" class="section hidden-section">
+      <h2>წესები</h2>
+      <p>დაიმახსოვრე პოზიციები და მოძებნე ერთი და იგივე სიმბოლოები. თამაშის დასრულდება ყველა წყვილის პოვნის შემდეგ.
+        აირჩიე ზომა და დააჭირე "დაწყება"-ს.
+      </p>
+    </section>
+
+    <section id="results" class="section hidden-section">
+      <h2>შედეგები</h2>
+      <p>მოგებული თამაშები: <span id="gamesWon">0</span></p>
+      <p>ჯამური დრო: <span id="totalTime">0</span> წმ</p>
+      <p>საშუალო დრო: <span id="averageTime">0</span> წმ</p>
+      <p>მინიმალური დრო: <span id="minTime">0</span> წმ</p>
+      <p>მაქსიმალური დრო: <span id="maxTime">0</span> წმ</p>
+    </section>
+    
+  </main>
+  <div id="winModal" class="modal hidden-section">
+  <div class="modal-content">
+    <h2>გილოცავ!</h2>
+    <p>ყველა წყვილი მოიძებნა!</p>
+    <p>დრო: <span id="finalTime"></span> წამი</p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
